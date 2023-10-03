@@ -1,5 +1,6 @@
 import React, { createContext, useEffect, useState } from "react";
 import jwt from "jsonwebtoken";
+import { baseUrl } from "@/src/config/baseUrl";
 
 export const userContext = createContext();
 
@@ -9,7 +10,10 @@ const ContextApi = ({ children }) => {
   useEffect(() => {
     const accessToken = localStorage.getItem("accessToken");
     const decodedToken = decodeAccessToken(accessToken);
-    setUser(decodedToken);
+    fetch(`${baseUrl}/auth/myProfile/${decodedToken?.userId}`)
+    .then(res=>res.json())
+    .then(data=>setUser(data))
+    .catch(err=>console.log(err))
   }, []);
 
   function decodeAccessToken(accessToken) {

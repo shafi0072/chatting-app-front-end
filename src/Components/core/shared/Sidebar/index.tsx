@@ -3,6 +3,7 @@ import { Avatar } from '@mui/material';
 import React from 'react';
 import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import GroupAddIcon from '@mui/icons-material/GroupAdd';
 import Link from 'next/link';
 const Sidebar = () => {
   return (
@@ -17,8 +18,10 @@ const Sidebar = () => {
       <div className='my-5'>
         <div>
           <ul>
-            <li className='py-3 px-4 text-gray-600 hover:bg-red-500 hover:rounded-full cursor-pointer hover:text-white'><Link href='/findFriend'><PeopleAltIcon fontSize='large' className='' /></Link></li>
-            <li className='py-3 px-4 text-gray-600 hover:bg-red-500 hover:rounded-full cursor-pointer hover:text-white'><Link href='/chating'><TelegramIcon fontSize='large' className='' /></Link></li>
+            <li className='py-3 px-4 text-gray-600 hover:bg-red-500 hover:rounded-full cursor-pointer hover:text-white'><Link href='/findFriend'><GroupAddIcon fontSize='large' className='' /></Link></li>
+            <li className='py-3 px-4 text-gray-600 hover:bg-red-500 hover:rounded-full cursor-pointer hover:text-white'><Link href='/friends'><PeopleAltIcon fontSize='large' className='' /></Link></li>
+            <li className='py-3 px-4 text-gray-600 hover:bg-red-500 hover:rounded-full cursor-pointer hover:text-white'><Link href='/chat'><TelegramIcon fontSize='large' className='' /></Link></li>
+            
           </ul>
         </div>
       </div>

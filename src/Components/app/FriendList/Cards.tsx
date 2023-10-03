@@ -15,7 +15,7 @@ const Cards = (props: any) => {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userId: user?.userId,
+        userId: user?._id,
         friendId: friendId,
         action: "add",
       }),
