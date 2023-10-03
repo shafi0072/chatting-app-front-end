@@ -24,7 +24,7 @@ const index = () => {
       <div className="w-full bg-gray-100 dark:bg-gray-800 px-10 pt-10">
         <div className="container mx-auto ">
 
-          <div role="" aria-label="Behind the scenes People " className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around" >
+          <div role="" aria-label="Behind the scenes People " className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around gap-4" >
             {
               data?.map((items, index) => <React.Fragment key={index}><Cards items={items} /></React.Fragment>)
             }
