@@ -18,10 +18,13 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(17, 17, 17)
+}
+
+.backgroundAuth{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 0, 0, 0.425)), url(https://uploads-ssl.webflow.com/5a9ee6416e90d20001b20038/6289f404226efd5b458afdd9_red-gradient.png);
+  width: 50%;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
 }
